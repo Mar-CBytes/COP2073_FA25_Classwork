@@ -1,0 +1,77 @@
+---
+title: "Classwork Activity"
+author: "Enter Your Name"
+output: html_notebook
+---
+
+
+# Instructions (Step by Step)
+
+## Step 1: Create fake data
+```{r}
+# Creating a small fake dataset
+set.seed(2073) # allows for reproducibility 
+
+students <- data.frame(
+  Name = paste("Student", 1:20),
+  StudyHours = round(runif(20, 1, 10), 1),
+  Satisfaction = round(rnorm(20, mean = 7, sd = 1.5), 1),
+  Major = sample(c("Data Science", "Business Analytics", "Math", "Computer Science"), 20, replace = TRUE)
+)
+
+head(students)
+```
+
+
+## Step 2: Drop a column
+
+```{r}
+# Remove the Name column
+
+```
+
+
+### Question:
+Why might someone drop a column like name or ID from a dataset?
+
+### Answer:
+
+## Step 3: Visualize
+```{r}
+library(ggplot2)
+```
+
+```{r}
+ggplot(Students_Clean, aes(x = Major, y = Satisfaction, fill = Major)) +
+  geom_boxplot() +
+  labs(
+    title = "Student Satisfaction by Major",
+    x = "Major",
+    y = "Satisfaction (1–10)"
+  ) +
+  theme_minimal()
+```
+
+
+## Step 4: Explain: Write 2–3 sentences each
+
+### Questions:
+
+1. What pattern or difference do you see in the chart?
+2. What might explain it?
+3. Do you think this chart is accurate?
+4. Why? Why not?
+
+## Step 5: Questions on Git, GitHub and R Markdown
+
+### Questions:
+
+1. What does git add do?
+2. What is the difference between git commit and git push?
+3. Why is it useful to use GitHub for your code or data projects?
+4. How could version control help when collaborating?
+5. What is the difference between a code chunk and regular text in R Markdown?
+6. How could R Markdown help you explain your analysis to someone else?
+
+### Answers:
+
